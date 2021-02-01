@@ -1,26 +1,23 @@
-<style>
 
-  body{
-    background-color: blue;
-  }
 
-  hr{
+body{
+  background-color: lavender;
+}
+
+hr{
     background-color: transparent;
     width: 7%;
 
     border-style: dotted none none none;
     border-top-color: grey;
     border-top-width: 10px;
+}
 
+h1{
+    color: #66bfbf;
 
-  }
+}
 
-  h1{
-      color: #66bfbf;
-  }
-
-  h3{
-
-      color: #66bfbf;
-  }
-</style>
+h3{
+    color: #66bfbf;
+}
