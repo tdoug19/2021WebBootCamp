@@ -27,13 +27,21 @@ h3{
 
 .top-container{
   background-color: #d3e0dc;
-  position: relative;
-  padding-top: 75px;
+
 
 }
 
-.profile{
-  background-color: #d3e0dc;
+.top-cloud{
+  position: relative;
+  top: 150px;
+  left: 400px;
+
+}
+
+.bottom-cloud{
+  position: relative;
+  top: 100px;
+  right: 350px;
 }
 
 .profile-text{
@@ -48,8 +56,13 @@ h3{
 }
 
 .lisa-profile-img{
-  height: 300px;
-  width: 300px;
+  width: 25%;
+
+}
+
+.profile-row{
+  text-align: center;
+  margin auto;
 }
 
 .skill-row{
@@ -76,22 +89,4 @@ h3{
 .bottom-container{
   background-color: #d3e0dc;
 
-}
-
-.top-cloud{
-  position: absolute;
-  top: 50px;
-  right: 400px;
-
-}
-
-
-
-
-
-
-.bottom-cloud{
-  position: absolute;
-  left: 350px;
-  bottom: 300px;
 }
