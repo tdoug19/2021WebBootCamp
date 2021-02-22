@@ -1,4 +1,4 @@
-var randomNumber = Math.floor(Math.random() * 5);;
+var randomNumber = Math.floor(Math.random() * 5);
 randomNumber++;
 console.log(randomNumber);
 
@@ -9,20 +9,20 @@ console.log(image1);
 
 var diceImage;
 
-diceImage = randomDiceImage(1);
+diceImage = randomDiceImage(randomNumber);
 console.log(diceImage);
 
+document.querySelector("img.img1").setAttribute('src', diceImage);
 
-if(randomNumber == 1){
-  document.querySelector("img.img1").setAttribute('src','images/dice1.png');
+randomNumber = (Math.floor(Math.random() * 5) +1);
+diceImage = randomDiceImage(randomNumber);
+console.log(diceImage);
 
-}
-else if (randomNumber == 1){
-  document.querySelector("img.img1").setAttribute('src','images/dice1.png');
-}
+document.querySelector("img.img2").setAttribute('src', diceImage);
+
 
 function randomDiceImage(imageNum)
 {
 
-  return "images/dice1";
+  return "images/dice" + imageNum + ".png";
 }
