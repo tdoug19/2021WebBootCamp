@@ -2,13 +2,15 @@ var audio = new Audio("sounds/tom-1.mp3");
 for (var i = 0; i < document.querySelectorAll(".drum").length; ++i) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function() {
     playSound(this.innerHTML);
+    buttonAnimation(this.innerHTML);
     });
 }
 
 document.addEventListener("keypress", function(event) {
 
     playSound(event.key);
-    
+    buttonAnimation(event.key);
+
 })
 
 
@@ -44,4 +46,11 @@ function playSound(drum) {
 
   }
 
+}
+
+function buttonAnimation(key){
+
+  var activeButton = document.querySelector("." + key);
+  activeButton.classList.add("pressed");
+  setTimeout(function(){activeButton.classList.remove("pressed"), 300});
 }
