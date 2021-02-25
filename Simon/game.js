@@ -66,6 +66,8 @@ function checkAnswer() {
 
       gameOverSound.play();
       gameOver = true;
+      $("body").addClass("game-over");
+      $("h1").text("Game Over!!");
 
     }
   }
