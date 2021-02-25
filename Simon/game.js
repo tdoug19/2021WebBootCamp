@@ -18,18 +18,25 @@ $(".btn").click(function(event) {
       break;
 
     case "yellow":
-    $("#yellow").fadeOut(100).fadeIn(100);
+      $("#yellow").fadeOut(100).fadeIn(100);
       audioYellow.play();
       break;
 
-      case "green":
+    case "green":
+      $("#green").fadeOut(100).fadeIn(100);
+      audioGreen.play();
+
+      break;
+
+    case "blue":
+      $("#blue").fadeOut(100).fadeIn(100);
+      audioBlue.play();
 
       break;
 
 
   }
-  console.log(event.target.id);
-  audio.play();
+
 });
 
 
