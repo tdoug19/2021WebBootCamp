@@ -1,12 +1,14 @@
 var buttonColors = ["red", "blue", "green", "yellow"];
 var randomChosenColor;
 var gamePattern = [];
+var userClickedPattern = [];
 var audioRed = new Audio('sounds/red.mp3');
 var audioYellow = new Audio('sounds/yellow.mp3');
 var audioBlue = new Audio('sounds/blue.mp3');
 var audioGreen = new Audio('sounds/green.mp3');
+var level = 0;
 
-nextSequence();
+
 
 $(".btn").click(function(event) {
   switch (event.target.id) {
@@ -35,9 +37,19 @@ $(".btn").click(function(event) {
       break;
 
 
+
   }
+  userClickedPattern.push(event.target.id);
+  //displayUserPattern();
 
 });
+
+$(document).keypress( function(event) {
+
+    console.log("keypress");
+    nextSequence();
+
+})
 
 
 
@@ -58,10 +70,18 @@ function nextSequence() {
 
 }
 
-function displayGamePatter() {
+function displayGamePattern() {
   for (i = 0; i < gamePattern.length; ++i) {
 
     console.log(gamePattern[i]);
+
+  }
+}
+
+function displayUserPattern() {
+  for (i = 0; i < userClickedPattern.length; ++i) {
+
+    console.log(userClickedPattern[i]);
 
   }
 }
