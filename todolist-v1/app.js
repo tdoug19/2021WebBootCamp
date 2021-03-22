@@ -38,6 +38,11 @@ app.get("/work", (req, res) => {
   });
 });
 
+app.get("/about", (req, res) => {
+
+  res.render("about");
+});
+
 
 app.post("/", (req, res) => {
   console.log(req.body.list);
