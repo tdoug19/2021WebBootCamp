@@ -44,7 +44,11 @@ app.get("/compose", (req, res) => {
 
 app.post("/compose", (req, res) => {
 
-  console.log(req.body.blogItem);
+  
+
+  var post = {postTitle:req.body.postTitle, blogPost:req.body.blogPost};
+
+  console.log(post);
 });
 
 
