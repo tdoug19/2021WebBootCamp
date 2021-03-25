@@ -37,14 +37,15 @@ app.get("/contact", (req, res) => {
   });
 });
 
+app.get("/compose", (req, res) => {
 
+  res.render('compose');
+});
 
+app.post("/", (req, res) => {
 
-
-
-
-
-
+  console.log(req.body.blogItem);
+});
 
 
 
