@@ -4,7 +4,9 @@
 <p><%= startingContent %></p>
 
 <% posts.forEach(function(post){ %>
-<%  console.log(post.postTitle); %>
+
+<h1><%= post.postTitle %></h1>
+<p><%= post.blogPost %></p>
 <%}) %>
 
 
