@@ -10,7 +10,15 @@ const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rho
 
 const app = express();
 
+let posts = [];  // var is function scope and let is block scope.
+
 app.set('view engine', 'ejs');
+/**
+* A template engine enables you to use static template files in your application.
+* At runtime, the template engine replaces variables in a template file with actual
+* values, and transforms the template into an HTML file sent to the client. This
+* approach makes it easier to design an HTML page.
+*/
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -21,6 +29,12 @@ app.get("/", (req, res) => {
   res.render('home',{
     startingContent: homeStartingContent
   });
+
+  for(var i=0; i<posts.length; ++i)
+  {
+    console.log(posts[i]);
+  }
+
 });
 
 app.get("/about", (req, res) => {
@@ -44,11 +58,12 @@ app.get("/compose", (req, res) => {
 
 app.post("/compose", (req, res) => {
 
-  
-
-  var post = {postTitle:req.body.postTitle, blogPost:req.body.blogPost};
-
-  console.log(post);
+  const post = {
+    postTitle:req.body.postTitle,
+    blogPost:req.body.blogPost
+  };
+  posts.push(post);
+  res.redirect("/");
 });
 
 
