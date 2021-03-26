@@ -27,13 +27,11 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
 
   res.render('home',{
-    startingContent: homeStartingContent
+    startingContent: homeStartingContent,
+    posts: posts
   });
 
-  for(var i=0; i<posts.length; ++i)
-  {
-    console.log(posts[i]);
-  }
+
 
 });
 
